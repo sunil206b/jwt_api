@@ -28,3 +28,7 @@ func (c *Controller) Index(w http.ResponseWriter, r *http.Request) {
 func (c *Controller) Login(w http.ResponseWriter, r *http.Request) {
 
 }
+
+func (c *Controller) SignUp(w http.ResponseWriter, r *http.Request) {
+
+}

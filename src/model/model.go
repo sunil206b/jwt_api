@@ -28,6 +28,6 @@ type LoginUser struct {
 
 // MyClaims will hold the claims information
 type MyClaims struct {
-	UserID int
+	SessionID string
 	jwt.StandardClaims
 }

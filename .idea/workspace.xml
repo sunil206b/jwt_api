@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb3cff5a-6ce3-45c4-ae59-d58a08885ae3" name="Default Changelist" comment="" />
+    <list default="true" id="bb3cff5a-6ce3-45c4-ae59-d58a08885ae3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/util.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

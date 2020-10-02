@@ -18,8 +18,9 @@ func main() {
 
 	controller := controllers.NewController(client)
 	r := mux.NewRouter()
-	r.HandleFunc("/", controller.Index)
-	r.HandleFunc("/login", controller.Login)
+	r.HandleFunc("/", controller.Index).Methods(http.MethodGet)
+	r.HandleFunc("/login", controller.Login).Methods(http.MethodPost)
+	r.HandleFunc("/signup", controller.SignUp).Methods(http.MethodPost)
 
 	srv := &http.Server{
 		Handler:      r,
