@@ -11,7 +11,7 @@ import (
 // User will hold the user information when creating new user
 type User struct {
 	ID        primitive.ObjectID `json:"id" bson:"_id,omitempty"`
-	UserID    int                `json:"userId" bson:"user_id"`
+	UserID    int64              `json:"userId" bson:"user_id"`
 	FirstName string             `json:"firstName" bson:"first_name"`
 	LastName  string             `json:"lastName" bson:"last_name"`
 	Email     string             `json:"email" bson:"email"`
@@ -28,6 +28,17 @@ type LoginUser struct {
 
 // MyClaims will hold the claims information
 type MyClaims struct {
-	SessionID string
+	SessionID string `json:"session_id"`
 	jwt.StandardClaims
+}
+
+func (user *User) ConstructUser() {
+	currentTime := time.Now()
+	if user.UserID <= 0 {
+		user.UserID = currentTime.Unix()
+	}
+	if !user.CreatedAt.IsZero() {
+		user.CreatedAt = currentTime
+	}
+	user.UpdatedAt = currentTime
 }

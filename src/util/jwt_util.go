@@ -24,9 +24,9 @@ func EncryptPassword(plainPass string) (string, error) {
 // ComparePassword function will decrypt the encrypted password to plain text
 func ComparePassword(hashedPass string, plainPass string) (bool, error) {
 	password := []byte(plainPass)
-	encryptPassword := []byte(hashedPass)
+	encryptedPass := []byte(hashedPass)
 
-	err := bcrypt.CompareHashAndPassword(encryptPassword, password)
+	err := bcrypt.CompareHashAndPassword(encryptedPass, password)
 	if err != nil {
 		return false, fmt.Errorf("not a valid password: %v", err)
 	}
@@ -34,7 +34,7 @@ func ComparePassword(hashedPass string, plainPass string) (bool, error) {
 }
 
 // GenerateToken function will generate the signed token based on the given sign
-func GenerateToken(secret string, sessionId string, email string) (string, error) {
+func GenerateToken(secret, sessionId, email string) (string, error) {
 	claims := model.MyClaims{
 		SessionID: sessionId,
 		StandardClaims: jwt.StandardClaims{
