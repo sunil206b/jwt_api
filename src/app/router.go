@@ -16,6 +16,7 @@ func NewRouter(collection *mongo.Collection, ctx context.Context) *http.Server {
 	r.HandleFunc("/", controller.Index).Methods(http.MethodGet)
 	r.HandleFunc("/login", controller.Login).Methods(http.MethodPost)
 	r.HandleFunc("/signup", controller.SignUp).Methods(http.MethodPost)
+	r.HandleFunc("/token", controller.Token).Methods(http.MethodGet)
 
 	srv := &http.Server{
 		Handler:      r,

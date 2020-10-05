@@ -22,6 +22,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
+	log.Println("Starting jwt_api Server...")
 	srv := app.NewRouter(collection, ctx)
 	if err := srv.ListenAndServe(); err != nil {
 		log.Fatalf("failed to start server: %v\n", err)
